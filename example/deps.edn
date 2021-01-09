@@ -1,0 +1,2 @@
+{:deps {jkxyz/tailwind {:local/root "../tailwind"}
+        jkxyz/tailwind-cli {:local/root "../tailwind-cli"}}}
