@@ -1,4 +1,4 @@
-{:paths ["src"]
+{:paths ["src/main"]
  :deps {jkxyz/tailwind {:local/root "../tailwind"}}
  :aliases
  {:tailwind/used-classes

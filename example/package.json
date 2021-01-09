@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "devDependencies": {
+      "tailwindcss": "^2.0.2",
+      "autoprefixer": "^10.2.1",
+      "postcss": "^8.2.4"
+  },
+  "scripts": {
+      "build-css": "tailwindcss build src/styles.css -o target/dev/resources/public/styles.css",
+      "build-css-prod": "clj -X:tailwind/used-classes :output-to target/prod/tailwind-used-classes && NODE_ENV=production tailwindcss build src/styles.css -o target/prod/resources/public/styles.css"
+  }
+}
