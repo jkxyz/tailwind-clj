@@ -12,7 +12,7 @@ and purging unused classes for production builds.
 ```
 
 ```
-$ clj -X tailwind.cli/used-classes :cljs-nses '[example.main]' :output-to used-classes.txt
+$ clj -X jkxyz.tailwind.cli/used-classes :cljs-nses '[example.main]' :output-to used-classes.txt
 ```
 
 See the `example` directory for suggested usage.
