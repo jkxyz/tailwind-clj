@@ -1,3 +1,4 @@
 {:paths ["src"]
- :deps {jkxyz/tailwind {:local/root "../tailwind"}
-        org.clojure/tools.cli {:mvn/version "1.0.194"}}}
+ :deps {org.clojure/clojure {:mvn/version "1.10.1"}
+        org.clojure/clojurescript {:mvn/version "1.10.764"}
+        jkxyz/tailwind {:local/root "../tailwind"}}}

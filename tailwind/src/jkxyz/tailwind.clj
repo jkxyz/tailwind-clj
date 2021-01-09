@@ -1,4 +1,4 @@
-(ns tailwind.core
+(ns jkxyz.tailwind
   (:require
    [clojure.spec.alpha :as spec]))
 
@@ -60,6 +60,8 @@
    []
    m))
 
+(def ^:dynamic *used-classes* nil)
+
 (defmacro tw
   "Takes a collection of class specs and returns a list of class names.
 
@@ -73,7 +75,7 @@
   (let [classes (->> classes
                      (mapcat #(cond (map? %) (parse-map %) (coll? %) % :else [%]))
                      (mapv name))]
-    #_(swap! used-classes into classes)
+    (when *used-classes* (swap! *used-classes* into classes))
     classes))
 
 (spec/fdef tw

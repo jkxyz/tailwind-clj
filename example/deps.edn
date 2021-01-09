@@ -1,2 +1,7 @@
-{:deps {jkxyz/tailwind {:local/root "../tailwind"}
-        jkxyz/tailwind-cli {:local/root "../tailwind-cli"}}}
+{:paths ["src"]
+ :deps {jkxyz/tailwind {:local/root "../tailwind"}}
+ :aliases
+ {:tailwind/used-classes
+  {:extra-deps {jkxyz/tailwind-cli {:local/root "../tailwind-cli"}}
+   :exec-fn jkxyz.tailwind.cli/used-classes
+   :exec-args {:clj-nses [example.main] :cljs-nses [example.main]}}}}
