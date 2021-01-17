@@ -1,6 +1,6 @@
 (ns example.html
   (:require
-   [jkxyz.tailwind :refer [tw]]))
+   [tailwind.core :refer [tw]]))
 
 (defn some-html []
   [:div {:class (tw :container {:mt 1})}

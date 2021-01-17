@@ -1,9 +1,9 @@
-(ns jkxyz.tailwind.cli
+(ns tailwind.cli
   (:require
    [clojure.string :as string]
    [clojure.java.io :as io]
    [cljs.analyzer.api :as cljs-ana]
-   [jkxyz.tailwind :as tailwind]))
+   [tailwind.core :as tailwind]))
 
 (defn- ns-sym->file [sym]
   (let [parts (string/split (string/replace (str sym) #"-" "_") #"\.")

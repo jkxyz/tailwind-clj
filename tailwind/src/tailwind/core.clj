@@ -1,4 +1,4 @@
-(ns jkxyz.tailwind
+(ns tailwind.core
   (:require
    [clojure.spec.alpha :as spec]))
 
