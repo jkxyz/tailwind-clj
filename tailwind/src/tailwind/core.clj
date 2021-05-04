@@ -60,7 +60,7 @@
    []
    m))
 
-(def ^:dynamic *used-classes* nil)
+(def ^:dynamic *used-classes* (atom nil))
 
 (defmacro tw
   "Takes a collection of class specs and returns a list of class names.
@@ -75,7 +75,7 @@
   (let [classes (->> classes
                      (mapcat #(cond (map? %) (parse-map %) (coll? %) % :else [%]))
                      (mapv name))]
-    (when *used-classes* (swap! *used-classes* into classes))
+    (swap! *used-classes* (fnil into #{}) classes)
     classes))
 
 (spec/fdef tw
